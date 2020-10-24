@@ -1,0 +1,36 @@
+using System;
+namespace Rextester
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Podaj swoje imie: ");
+            string firstname = Console.ReadLine();
+            Console.WriteLine("Podaj swoje nazwisko: ");
+            string lastname = Console.ReadLine();
+            Console.WriteLine("Podaj swoj rok urodzenia: ");
+            string year = Console.ReadLine();
+            Console.WriteLine("Podaj swoj numer telefonu (nie jest to wymagane): ");
+            string phonenumber = Console.ReadLine();
+            if (string.IsNullOrEmpty(firstname))
+            {
+                Console.WriteLine("Musisz podac swoje imie!");
+                firstname = Console.ReadLine();
+            }
+            else if (string.IsNullOrEmpty(lastname))
+            {
+                Console.WriteLine("Musisz podac nazwisko!");
+                lastname = Console.ReadLine(); 
+            }
+            else if (string.IsNullOrEmpty(year))
+            {
+                Console.WriteLine("Musisz podac rok swojego urodzenia!");
+                year = Console.ReadLine();
+            }
+            int yearnow = 2020;
+            int old = yearnow - int.Parse(year);
+            Console.WriteLine("Witaj " + firsname + " " + lastname + " Masz " + old + " lat. A twoj nr telefonu to" + phonenumber);
+        }
+    }
+}
